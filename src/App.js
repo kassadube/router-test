@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
-import Home from './home';
+import Home from './pages/home';
 import Login from './pages/login';
 import Logout from './pages/logout';
 import Create from './pages/create';
@@ -18,23 +18,18 @@ class App extends Component {
 
   render() {
 
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>React Router Redux</h2>
-        </div>
-        <Navigation context={this.context} />
-        <div className="App-main">
+    return (      
+        <div className="container">
+          <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/apply" component={AppForm} />
           <Route exact path="/rr" component={NotFound} />
-          <Route exact path="login" component={Login} />
+          <Route exact path="/login" component={Login} />
           <Route path="logout" component={Logout} />
           <Route exact path="/create" component={Create} />
-          
-        </div>
-      </div>
+          <Route component={NotFound} />
+          </Switch>
+        </div>     
     );
   }
 }

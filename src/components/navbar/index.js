@@ -17,7 +17,7 @@ export default function navbar({user}) {
           <li><Link to="/create">Create new questions</Link></li>
         </ul>
         <ul className="nav navbar-nav navbar-right">
-          <li><Link to="/profile/me">{user.login}</Link></li>
+          <li><Link to="/profile/me">{user == null ? "" : user.login}</Link></li>
           <li><Link to="/logout">logout</Link></li>
         </ul>
       </div>

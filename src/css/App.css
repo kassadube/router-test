@@ -28,17 +28,3 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-
-nav li+li:before
-{
-  content: ' | ';
-}
-
-nav ul {
-  display: flex;
-}
-nav ul li {
-  list-style-type: none;
-  display: block;
-
-}

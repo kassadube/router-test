@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`mount testing #navbar loged in user 1`] = `
 <navbar
   current="/profile/me"

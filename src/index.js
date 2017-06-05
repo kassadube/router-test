@@ -24,11 +24,11 @@ import store, {history} from './store';
 ReactDOM.render(
 
   <Provider store={store}>
-    <HashRouter history={history}>
+    <Router history={history}>
       <div>
         <App />
       </div>
-    </HashRouter>
+    </Router>
   </Provider>,
   document.getElementById('root')
 );
