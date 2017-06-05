@@ -3,6 +3,10 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 
 import Home from './home';
+import Login from './pages/login';
+import Logout from './pages/logout';
+import Create from './pages/create';
+import NotFound from './pages/notFound';
 import AppForm from './AppForm';
 import Navigation from "./Navigation";
 
@@ -22,10 +26,13 @@ class App extends Component {
         </div>
         <Navigation context={this.context} />
         <div className="App-main">
-          <span>ssss</span>
           <Route exact path="/" component={Home} />
-          <span>ssss</span>
           <Route exact path="/apply" component={AppForm} />
+          <Route exact path="/rr" component={NotFound} />
+          <Route exact path="login" component={Login} />
+          <Route path="logout" component={Logout} />
+          <Route exact path="/create" component={Create} />
+          
         </div>
       </div>
     );

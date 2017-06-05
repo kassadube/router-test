@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-
 import {logoutAction} from '../../store/actions';
 import store from '../../store';
 
@@ -20,6 +19,7 @@ class Create extends Component {
   constructor(props, context) {
     super(props, context);
     this.state = {};
+    console.log("CREATE");
   }
 
 
