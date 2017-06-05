@@ -22,7 +22,9 @@ class App extends Component {
         </div>
         <Navigation context={this.context} />
         <div className="App-main">
+          <span>ssss</span>
           <Route exact path="/" component={Home} />
+          <span>ssss</span>
           <Route exact path="/apply" component={AppForm} />
         </div>
       </div>

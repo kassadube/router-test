@@ -12,13 +12,14 @@ import createHistory from 'history/createBrowserHistory';
 import registerReducer from "./store/reducers/register";
 
 import App from './App';
-const history = createHistory();
-const middleware = routerMiddleware(history);
+import store, {history} from './store';
+//const history = createHistory();
+//const middleware = routerMiddleware(history);
 
 
 
-const reducers = combineReducers({ register: registerReducer, router: routerReducer });
-const store = createStore(reducers, composeWithDevTools(applyMiddleware(middleware, thunk)));
+//const reducers = combineReducers({ register: registerReducer, router: routerReducer });
+//const store = createStore(reducers, composeWithDevTools(applyMiddleware(middleware, thunk)));
 
 ReactDOM.render(
 
